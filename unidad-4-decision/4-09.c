@@ -1,4 +1,5 @@
-/* Confeccionar un programa que permita ingresar un carácter alfanumérico
+/*
+ * Confeccionar un programa que permita ingresar un carácter alfanumérico
  * y determine e informe si lo ingresado corresponde a una vocal,
  * con el mensaje “VOCAL” y su correspondiente valor numérico en ASCII.
  *
@@ -10,7 +11,7 @@
 int main()
 {
     char alf, car;
-    // a=85 e=101 i=105 o=1111 u=117, A=65, E=69, I=73, O=79, U=85;
+    // a=97 e=101 i=105 o=1111 u=117, A=65, E=69, I=73, O=79, U=85;
 
     printf("Ingrese un caracter alfanumerico: ");
     scanf("%c", &car);
