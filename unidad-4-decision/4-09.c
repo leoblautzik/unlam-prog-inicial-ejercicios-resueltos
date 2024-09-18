@@ -10,13 +10,14 @@
 
 int main()
 {
-    char alf, car;
+    char car;
     // a=97 e=101 i=105 o=1111 u=117, A=65, E=69, I=73, O=79, U=85;
 
     printf("Ingrese un caracter alfanumerico: ");
     scanf("%c", &car);
-    alf = tolower(car);
-    if (alf == 'a' || alf == 'e' || alf == 'i' || alf == 'o' || alf == 'u')
+    // car = tolower(car);
+    if (car == 'a' || car == 'e' || car == 'i' || car == 'o' || car == 'u' || car == 'A' || car == 'E' || car == 'I' ||
+        car == 'O' || car == 'U')
     {
         printf("VOCAL\n");
         printf("El codigo ASCII de la vocal ingresada es: %d\n", car);
