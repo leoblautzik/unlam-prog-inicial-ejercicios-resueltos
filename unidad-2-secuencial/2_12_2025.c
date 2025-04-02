@@ -21,7 +21,7 @@ int main()
     numero = sumacifras; // no puede tener mas de dos cifras
     u = numero / 1 % 10;
     d = numero / 10 % 10;
-    sumacifras = u + d; // podríá volver a tener dos cifras, ej: 9929 o 8357
+    sumacifras = u + d; // podríá volver a tener dos cifras, ej: 9929
 
     numero = sumacifras; // por eso repetimos.
     u = numero / 1 % 10;

@@ -110,6 +110,7 @@ float tiempo_promedio(float tiempos[], int tam)
     {
         promedio = suma / contador;
     }
+
     return promedio;
 }
 
