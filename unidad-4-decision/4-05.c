@@ -1,49 +1,46 @@
-/*
- * Se ingresan 3 números enteros. Informarlos en orden creciente.
+/* 4.5 2025
+ * Confeccionar un programa que permita ingresar 4 números enteros, de a uno por
+ * vez y determine el menor valor y su número de orden. Informe los valores
+ * ingresados e identifique al menor con mensaje aclaratorio.
  */
-
 #include <stdio.h>
 
 int main()
 {
-    int n1, n2, n3, menor, medio, mayor;
 
-    printf("Ingrese el primer número: ");
-    scanf("%d", &n1);
-    printf("Ingrese el segundo número: ");
-    scanf("%d", &n2);
-    printf("Ingrese el tercer número: ");
-    scanf("%d", &n3);
+    int a, b, c, d, orden, min;
 
-    menor = n1;
+    printf("Ingrese un valor entero: ");
+    scanf("%d", &a);
 
-    if (n2 < menor)
+    min = a;
+    orden = 1;
+
+    printf("Ingrese otro entero: ");
+    scanf("%d", &b);
+
+    if (b < min)
     {
-        medio = menor;
-        menor = n2;
-    }
-    else
-    {
-        medio = n2;
+        min = b;
+        orden = 2;
     }
 
-    if (n3 < menor)
+    printf("Ingrese uno mas: ");
+    scanf("%d", &c);
+    if (c < min)
     {
-        mayor = medio;
-        medio = menor;
-        menor = n3;
-    }
-    else if (n3 < medio)
-    {
-        mayor = medio;
-        medio = n3;
-    }
-    else
-    {
-        mayor = n3;
+        min = c;
+        orden = 3;
     }
 
-    printf("Menor: %d, Medio: %d, Mayor: %d\n", menor, medio, mayor);
+    printf("Ingrese uno mas, el último: ");
+    scanf("%d", &d);
+    if (d < min)
+    {
+        min = d;
+        orden = 4;
+    }
 
-    return 0;
+    printf("Los numeros ingresados son: %d, %d, %d, %d\n", a, b, c, d);
+    printf("El minimo es: %d y fue el %d° en salir\n", min, orden);
 }
