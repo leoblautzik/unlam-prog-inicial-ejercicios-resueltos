@@ -42,9 +42,7 @@ int main()
         precio_unitario = 300;
         importe = precio_unitario * cantidad;
         if (cantidad > 10)
-        {
             importe *= 0.9; // 10% de descuento
-        }
         break;
 
     case 4:

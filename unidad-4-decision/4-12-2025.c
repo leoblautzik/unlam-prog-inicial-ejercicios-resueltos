@@ -24,8 +24,7 @@ int main()
     scanf("%d", &historia);
 
     printf("Ingrese el código de la prestación (A, D, F, M, T): ");
-    scanf(" %c",
-          &codigo); // Espacio antes de %c para evitar problemas con el buffer
+    scanf(" %c", &codigo); // Espacio antes de %c para evitar problemas con el buffer
 
     switch (codigo)
     {

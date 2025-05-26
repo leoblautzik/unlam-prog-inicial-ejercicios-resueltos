@@ -7,8 +7,7 @@
 int main()
 {
     int i, n;
-    int suma = 0;
-    float promedio;
+    int suma = 0, contadorDePares = 0;
 
     for (i = 0; i < 5; i++)
     {
@@ -17,7 +16,15 @@ int main()
         if (n % 2 == 0)
         {
             suma += n;
+            contadorDePares++;
         }
     }
-    printf("El promedio de los enteros pares ingresados es: %0.2f", (float)suma / 5);
+    if (contadorDePares > 0)
+    {
+        printf("El promedio de los enteros pares ingresados es: %0.2f", (float)suma / contadorDePares);
+    }
+    else
+    {
+        printf("No se ingresaron valores pares");
+    }
 }

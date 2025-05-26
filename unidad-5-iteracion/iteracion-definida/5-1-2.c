@@ -12,8 +12,8 @@ int main()
     for (i = 100; i >= 50; i -= 5)
     {
         suma += i;
-        printf("%d\n", suma);
     }
+    printf("%d\n", suma);
 
     return 0;
 }
