@@ -3,8 +3,8 @@
  * vez y determine el menor valor y su número de orden. Informe los valores
  * ingresados e identifique al menor con mensaje aclaratorio.
  */
-#include <stdio.h>
 
+#include <stdio.h>
 int main()
 {
 
