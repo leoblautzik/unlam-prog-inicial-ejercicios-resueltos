@@ -6,6 +6,7 @@
  * si encuentra un divisor no seguir buscando ya que se sabe que no es primo.
  */
 
+#include <stdbool.h>
 #include <stdio.h>
 // int esPrimo(int);
 int main()
@@ -15,7 +16,7 @@ int main()
     int i = 2;
     int n = 2;
     int es_primo = 1;
-    int flag = 0;
+    bool flag = false;
     do
     {
         if (flag)
@@ -24,22 +25,17 @@ int main()
         }
         printf("Ingrese la cantidad de nros. primos: ");
         scanf("%d", &cant_pri);
-        flag = 1;
+        flag = true;
     } while (cant_pri <= 0);
 
     while (contador < cant_pri)
     {
         i = 2;
-        es_primo = 1;
-        while (es_primo && i <= n / 2)
+        while (n % i != 0 && i <= n / 2)
         {
-            if (n % i == 0)
-            {
-                es_primo = 0;
-            }
             i++;
         }
-        if (es_primo)
+        if (i > n / 2)
         {
             printf("%d\n", n);
             contador++;

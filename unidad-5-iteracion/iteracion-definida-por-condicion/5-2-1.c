@@ -9,9 +9,8 @@ menores que 600. (1 2 4 8 16 …)
 int main()
 {
     int c = 0;
-    int i, j;
     int potencia = 1;
-    while (potencia < 600)
+    while (potencia < 6000)
     {
         printf("%d\n", potencia);
         potencia *= 2;

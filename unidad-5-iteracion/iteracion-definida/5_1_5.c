@@ -3,7 +3,7 @@
 int main()
 {
     int i, n, x, suma_mul_3 = 0, cant_mul_5 = 0, suma_orden_par = 0;
-    printf("Ingrese lacantidad de numeros a procesar: ");
+    printf("Ingrese la cantidad de numeros a procesar: ");
     scanf("%d", &n);
 
     for (i = 1; i <= n; i++)

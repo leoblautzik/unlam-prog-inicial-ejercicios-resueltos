@@ -13,7 +13,9 @@ int main()
         for (j = 2; i - 1; j++)
         {
             if (i % j == 0)
+            {
                 primo = false;
+            }
         }
         if (primo)
         {

@@ -4,21 +4,17 @@
 bool es_primo(int);
 int main()
 {
-    int num, i, contador = 0;
-    printf("Ingrese primos menores que cual: ");
+    int num, i = 2, contador = 0;
+    printf("Ingrese la cantidad de numeros primos: ");
     scanf("%d", &num);
-    for (i = 2; i < num; i++)
+    while (contador < num)
     {
         if (es_primo(i))
         {
-            printf("%d, ", i);
+            printf("%d\n", i);
             contador++;
         }
-        if (contador % 10 == 0 && contador != 0)
-        {
-            printf("\n");
-            contador = 0;
-        }
+        i++;
     }
 
     return 0;

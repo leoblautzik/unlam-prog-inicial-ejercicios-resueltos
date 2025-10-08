@@ -27,4 +27,9 @@ int main()
     {
         printf("No se ingresaron valores pares");
     }
+    if (i > 10)
+    {
+        printf("Hola");
+    }
+    return 0;
 }

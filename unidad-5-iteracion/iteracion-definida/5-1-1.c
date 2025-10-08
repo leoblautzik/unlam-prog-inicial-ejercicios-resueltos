@@ -10,4 +10,8 @@ int main()
     {
         printf("%d\n", i);
     }
+    for (i = 10; i < 1000; i += 10)
+    {
+        printf("\ni = %d", i);
+    }
 }
