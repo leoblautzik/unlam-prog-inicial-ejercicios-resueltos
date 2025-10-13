@@ -8,16 +8,16 @@ bool esta_dentro_del_rango(int, int, int);
 
 int main()
 {
-    printf("%d\n", esFechaValida(5, 5, 1990));
-    printf("%d\n", esFechaValida(29, 2, 2024));
-    printf("%d\n", !esFechaValida(31, 4, 2024));
-    printf("%d\n", !esFechaValida(28, 13, 2024));
-    printf("%d\n", !esFechaValida(29, 2, 1999));
-    printf("%d\n", esFechaValida(29, 2, 2000));
-    printf("%d\n", esFechaValida(29, 2, 2024));
-    printf("%d\n", esFechaValida(29, 2, 2024));
-    printf("%d\n", !esFechaValida(31, 11, 2024));
-    printf("%d\n", !esFechaValida(31, 06, 2020));
+    printf(" 1 -> %d\n", esFechaValida(5, 5, 1990));
+    printf(" 1 -> %d\n", esFechaValida(29, 2, 2024));
+    printf(" 1 -> %d\n", !esFechaValida(31, 4, 2024));
+    printf(" 1 -> %d\n", !esFechaValida(28, 13, 2024));
+    printf(" 1 -> %d\n", !esFechaValida(29, 2, 1999));
+    printf(" 1 -> %d\n", esFechaValida(29, 2, 2000));
+    printf(" 1 -> %d\n", esFechaValida(29, 2, 2024));
+    printf(" 1 -> %d\n", esFechaValida(29, 2, 2024));
+    printf(" 1 -> %d\n", !esFechaValida(31, 11, 2024));
+    printf(" 1 -> %d\n", !esFechaValida(31, 06, 2020));
 
     return 0;
 }
@@ -34,7 +34,7 @@ bool esFechaValida(int d, int m, int a)
         if (m == 2)
         {
             // Febrero
-            if ((es_bisiesto(a) && d <= 29) || (!es_bisiesto(a) && d <= 28))
+            if (d <= 28 + es_bisiesto(a))
                 valido = true;
         }
         else if (m == 4 || m == 6 || m == 9 || m == 11)
