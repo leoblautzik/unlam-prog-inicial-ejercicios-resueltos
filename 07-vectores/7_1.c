@@ -29,8 +29,9 @@ void mostrar(int vec[], int tam)
     printf("\n");
 }
 
-/** Coloca en el vector c todos los elementos de a y luego todos los elementos de b.
- * El parámetro tam es el tamaño de a y de b, mientras que el tamaño de c será del doble que el de a o b.
+/** Coloca en el vector c todos los elementos de a y luego todos los elementos
+ * de b. El parámetro tam es el tamaño de a y de b, mientras que el tamaño de c
+ * será del doble que el de a o b.
  */
 void juntar(int a[], int b[], int c[], int tam)
 {
