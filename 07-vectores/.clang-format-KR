@@ -1,0 +1,31 @@
+BasedOnStyle: LLVM
+Language: C
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+
+# Llaves al estilo K&R
+BreakBeforeBraces: Attach
+AlwaysBreakAfterDefinitionReturnType: None
+AlwaysBreakAfterReturnType: None
+
+# Mantener llaves siempre
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: false
+AllowShortBlocksOnASingleLine: false
+
+# Espacios y alineación
+SpaceBeforeParens: ControlStatements
+SpaceAfterCStyleCast: false
+PointerAlignment: Right
+AlignConsecutiveAssignments: false
+AlignConsecutiveDeclarations: false
+AlignTrailingComments: false
+
+# Límites y estética
+ColumnLimit: 100
+KeepEmptyLinesAtTheStartOfBlocks: false
+IndentCaseLabels: false
+SortIncludes: false
+
