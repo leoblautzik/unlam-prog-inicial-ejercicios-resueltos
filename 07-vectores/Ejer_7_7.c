@@ -1,19 +1,22 @@
-/*  Una empresa textil desea realizar un informe sobre los sueldos de cada
-sección para lo cual dispone de los siguientes datos de cada empleado: • Legajo
-entero, mayor a cero) • Sección (carácter, desde ‘A’ hasta ‘H’) •
-ueldo (real, mayor a cero) El fin de datos es cuando aparece un legajo igual a
-cero. Se pide: a. Emitir un informe que indique por sección, el total de sueldos
-e la misma.
-
-SECCIÓN    TOTAL DE SUELDOS POR SECCIÓN
-          A       xxxxx.xx
-          B       xxxxx.xx
-         ….      ………..
-
-   TOTAL SUELDOS    xxxxxx.xx
-
-b. El legajo del empleado con mayor sueldo consignando legajo, sección y sueldo.
-c. El promedio de sueldo por empleado. */
+/**  Una empresa textil desea realizar un informe sobre los sueldos de cada
+ * sección para lo cual dispone de los siguientes datos de cada empleado:
+ * Legajo: entero, mayor a cero)
+ * Sección: (carácter, desde A hasta H)
+ * Sueldo: (real, mayor a cero)
+ * El fin de datos es cuando aparece un legajo igual a cero.
+ * Se pide:
+ * a. Emitir un informe que indique por sección, el total de sueldos de la
+ * misma.
+ *
+ * SECCIÓN    TOTAL DE SUELDOS POR SECCIÓN
+ * A          xxxxx.xx
+ * B          xxxxx.xx
+ *
+ *   TOTAL SUELDOS    xxxxxx.xx
+ *
+ * b. El legajo del empleado con mayor sueldo consignando legajo, sección y
+ * sueldo. c. El promedio de sueldo por empleado.
+ */
 
 #include <ctype.h>
 #include <stdbool.h>
@@ -30,7 +33,8 @@ float SumaVec(float[], int);
 int main()
 {
     int cont_empl = 0, legajo, pos, max_leg;
-    char vSeccion[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'}, seccion, max_sec;
+    char vSeccion[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'}, seccion,
+         max_sec;
     float vImpXSec[8] = {0}, sueldo, max;
     bool primero = true;
 
@@ -72,7 +76,8 @@ int main()
         printf("\nMaximo Sueldo: %.2f\tLegajo: %d\tSeccion: %c\n", max, max_leg,
                max_sec); // Punto b
 
-        printf("\nEl promedio de sueldos pagasdo por empleado es $ %.2f", SumaVec(vImpXSec, 8) / cont_empl); // Punto c
+        printf("\nEl promedio de sueldos pagasdo por empleado es $ %.2f",
+               SumaVec(vImpXSec, 8) / cont_empl); // Punto c
     }
     else
         printf("\nNo se ingresaron empleados...");
@@ -143,7 +148,7 @@ int BusquedaSec(char V[], int ce, char dato)
 {
     int i = 0;
 
-    while (V[i] != dato && i < ce)
+    while (i < ce && V[i] != dato)
         i++;
 
     if (i == ce)
@@ -178,12 +183,36 @@ int leer_y_validar_seccion()
     printf("Ingrese la seccion: de A a H  ");
     getchar();
     scanf("%c", &seccion);
-    while ((int)seccion) < (int)'A' || (int)seccion > (int)'H')
-        {
-            printf("Seccion incorrecta, intente nuevamente");
-            printf("Ingrese la seccion: de A a H  ");
-            getchar();
-            scanf("%c", &seccion);
-        }
+    while ((int)seccion < (int)'A' || (int)seccion > (int)'H')
+    {
+        printf("Seccion incorrecta, intente nuevamente");
+        printf("Ingrese la seccion: de A a H  ");
+        getchar();
+        scanf("%c", &seccion);
+    }
     return seccion;
+}
+
+void ordenarVecParal(char Vec1[], float Vec2[], int ce)
+{
+    int i, pmin, aux;
+
+    for (i = 0; i < ce - 1; i++)
+    {
+        pmin = PosicionMinimo(V, i, ce);
+        if (pmin != i)
+        {
+            aux = V[i];
+            V[i] = V[pmin];
+            V[pmin] = aux;
+        }
+    }
+}
+int PosicionMinimo(int V[], int ini, int tam)
+{
+    int i, pmin;
+
+    pmin = i for (i = ini + 1; i < tam; i++) if (V[i] < V[pmin]) pmin = i;
+
+    return pmin;
 }

@@ -12,7 +12,9 @@ int main()
     vectorcito[4] = -10;
 
     for (i = 0; i < 5; i++)
+    {
         printf("vectorcito[%d]=%d\n", i, vectorcito[i]);
+    }
 
     return 0;
 }

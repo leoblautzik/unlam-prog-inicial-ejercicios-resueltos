@@ -17,8 +17,10 @@ int main()
 int busqueda_secuencial(int dato, int v[], int ce)
 {
     int i = 0, p;
-    while (i < ce && v[i] != dato)
+    while (v[i] != dato && i < ce)
+    {
         i++;
+    }
     if (i == ce)
         p = -1;
     else
